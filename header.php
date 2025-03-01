@@ -47,6 +47,7 @@ session_start();
                     <!-- <a href="#"><button type="button" class="btn btn-outline-light me-2">Login</button></a> -->
                     <a href="sign-up.php"><button type="button" class="btn btn-warning">Sign-up</button></a>
                     <a href="mycart.php"><button type="button" class="btn btn-outline-light me-2">My Cart (<?php echo $count ?>)</button></a>
+                    <a href="dashboard.php"><button type="button" class="btn btn-primary">Profile</button></a>
                 </div>
             </div>
         </div>

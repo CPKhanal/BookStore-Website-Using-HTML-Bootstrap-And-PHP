@@ -26,7 +26,7 @@
       <div class="col-lg-3 py-5">
         <form action="manage-cart.php"  method="post">
         <div class="card">
-          <img src="books-img/30.jpg" class="card-img-top" alt="...">
+          <img src="books-img/30.jpg" class="card-img-top" alt="book img">
           <div class="card-body text-center">
             <h5 class="card-title">Can't Hurt Me</h5>
             <p class="card-text">Price: 40$</p>
