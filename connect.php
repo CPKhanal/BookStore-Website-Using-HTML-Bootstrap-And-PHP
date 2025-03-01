@@ -9,9 +9,9 @@ $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 // Replace 'your_username' and 'your_password' with your actual MySQL username and password
 $servername = 'localhost';
-$username = 'qvsmymfe_bookstore';
-$db_password = 'EnterYourDatabasePassword';
-$dbname = 'qvsmymfe_bookstore';
+$username = 'root';
+$db_password = '';
+$dbname = 'bookstore';
 
 // Create a connection
 $conn = new mysqli($servername, $username, $db_password, $dbname);
@@ -27,7 +27,7 @@ $stmt->bind_param("ss", $email, $hashed_password);
 
 // Execute the query
 if ($stmt->execute()) {
-    echo "New record created successfully";
+    // echo "New record created successfully";
 } else {
     echo "Error: " . $stmt->error;
 }

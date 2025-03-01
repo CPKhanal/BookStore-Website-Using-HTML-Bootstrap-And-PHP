@@ -7,7 +7,6 @@
   <title>Book Store</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
 </head>
 
 <body>
@@ -40,7 +39,9 @@
           <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
           <hr class="my-4">
           <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
+
         </form>
+        
       </div>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-$conn = mysqli_connect('localhost', 'qvsmymfe_bookstore', 'YourDatabasePassword', 'qvsmymfe_bookstore');
+$conn = mysqli_connect('localhost', 'root', '', 'bookstore');
 if (mysqli_connect_error()) {
     echo "
         <script>

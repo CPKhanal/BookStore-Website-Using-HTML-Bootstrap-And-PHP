@@ -1,5 +1,3 @@
-<!-- This connect2.php file is used to send data of contact us page to database -->
-
 <?php
 // Get data from POST request
 $name = $_POST['name'] ?? '';
@@ -8,9 +6,9 @@ $message = $_POST['message'] ?? '';
 
 // Database connection parameters
 $servername = "localhost";
-$username = "qvsmymfe_bookstore"; // Your actual database username
-$password = "Your actual database password"; // Your actual database password
-$dbname = "qvsmymfe_bookstore";
+$username = "root"; // Your actual database username
+$password = ""; // Your actual database password
+$dbname = "bookstore";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
