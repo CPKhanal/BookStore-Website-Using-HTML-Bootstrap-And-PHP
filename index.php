@@ -31,7 +31,7 @@
             <h5 class="card-title">Can't Hurt Me</h5>
             <p class="card-text">Price: 40$</p>
             <button type="submit" class="btn btn-info" name="Add_To_Cart">Add to Cart</button>
-            <input type="hidden" name="Item_Name"  value="Can't Hurt Me"/>
+            <input type="hidden" name="Item_Name"  value="Cant Hurt Me"/>
             <input type="hidden" name="Price"  value="40"/>
           </div>
         </div>

@@ -8,6 +8,8 @@ session_start();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Book Store</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
 
@@ -30,11 +32,13 @@ session_start();
                     <li><a href="popular.php" class="nav-link px-2 text-white">Popular</a></li>
                     <li><a href="about.php" class="nav-link px-2 text-white">About</a></li>
                     <li><a href="contact-us.php" class="nav-link px-2 text-white">Contact Us</a></li>
+                    <li><a href="announcements.php" class="nav-link px-2 text-white">Announcements</a></li>
                 </ul>
 
-                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                    <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search" action="search_results.php" method="get">
+                    <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search" name="query" required>
                 </form>
+
 
                 <?php 
                 $count=0;

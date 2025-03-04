@@ -40,9 +40,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Verify the password entered by the user
         if (password_verify($password, $user['password'])) {
+            $_SESSION['user_logged_in'] = true;
             // Password is correct, log the user in
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['email'] = $user['email'];
+            
+
 
             // Redirect to the index page after successful login
             header("Location: dashboard.php");

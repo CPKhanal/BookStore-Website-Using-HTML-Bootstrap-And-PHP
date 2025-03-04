@@ -41,6 +41,7 @@ $users = $conn->query("SELECT * FROM userdetails ORDER BY created_at DESC LIMIT 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+    
 <div class="container mt-5">
         <h2>Welcome, Admin</h2>
         <a href="logout.php" class="btn btn-danger">Logout</a> <!-- Logout Button -->
@@ -122,6 +123,47 @@ $users = $conn->query("SELECT * FROM userdetails ORDER BY created_at DESC LIMIT 
             </tr>
             <?php } ?>
         </table>
+
+        <?php
+// Fetch announcements
+$announcementResult = $conn->query("SELECT * FROM announcements ORDER BY created_at DESC");
+?>
+<br><br><br>
+<h3>Announcements</h3>
+<!-- Form to Add Announcement -->
+<form method="post" action="add_announcement.php" class="mb-3">
+    <div class="mb-2">
+        <input type="text" name="title" class="form-control" placeholder="Announcement Title" required>
+    </div>
+    <div class="mb-2">
+        <textarea name="content" class="form-control" placeholder="Announcement Content" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Announcement</button>
+</form>
+
+<!-- Display Announcements -->
+<table class="table table-bordered">
+    <tr>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Date</th>
+        <th>Action</th>
+    </tr>
+    <?php while ($announcement = $announcementResult->fetch_assoc()) { ?>
+    <tr>
+        <td><?= $announcement["title"] ?></td>
+        <td><?= $announcement["content"] ?></td>
+        <td><?= $announcement["created_at"] ?></td>
+        <td>
+            <form method="post" action="delete_announcement.php" style="display:inline;">
+                <input type="hidden" name="id" value="<?= $announcement['id'] ?>">
+                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+            </form>
+        </td>
+    </tr>
+    <?php } ?>
+</table>
+
     </div>
 </body>
 </html>

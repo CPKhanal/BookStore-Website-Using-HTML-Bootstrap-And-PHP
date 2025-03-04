@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 01, 2025 at 03:04 AM
+-- Generation Time: Mar 04, 2025 at 12:41 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -43,6 +43,52 @@ INSERT INTO `admin` (`id`, `username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `announcements`
+--
+
+CREATE TABLE `announcements` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `content` text NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `announcements`
+--
+
+INSERT INTO `announcements` (`id`, `title`, `content`, `created_at`) VALUES
+(9, 'Exciting News: Our Offline Store is Launching Soon!', 'We are thrilled to announce that our offline store will be launching soon! After receiving incredible support from our online community, we’re excited to take the next step and bring our carefully curated collection closer to you in person. The offline store will offer a more personalized shopping experience, and we can\'t wait to welcome you to explore our products in a brand-new setting. Stay tuned for updates on the opening date, location, and special offers that we have in store for you. We’re incredibly grateful for your continued support, and we look forward to seeing you in our new store soon!', '2025-03-03 23:01:43'),
+(10, 'New Book Arrivals at Our Online Store!', 'We are excited to share that a fresh batch of books has just arrived at our online store! Whether you\'re a fan of fiction, non-fiction, or something in between, we\'ve got something for everyone. Our new collection features bestsellers, hidden gems, and timeless classics, so be sure to check it out and find your next read. Plus, enjoy a special discount for a limited time when you shop online. Don’t miss out—explore our latest titles today and indulge in the joy of reading!', '2025-03-03 23:02:42'),
+(11, 'Join Our Loyalty Program for Exclusive Benefits!', 'We’re excited to introduce our new Loyalty Program to show appreciation for your continued support. As a member, you’ll receive exclusive perks like early access to new releases, special discounts, and members-only events. Signing up is easy and free, and you\'ll start earning points with every purchase! It\'s our way of saying thank you for being part of the [Your Store Name] family. Sign up today and start enjoying the benefits right away!', '2025-03-03 23:03:11');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `announcement_replies`
+--
+
+CREATE TABLE `announcement_replies` (
+  `reply_id` int(11) NOT NULL,
+  `announcement_id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `reply_text` text NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `announcement_replies`
+--
+
+INSERT INTO `announcement_replies` (`reply_id`, `announcement_id`, `user_id`, `reply_text`, `created_at`) VALUES
+(16, 11, NULL, 'hi', '2025-03-03 23:29:44'),
+(17, 11, NULL, 'hey', '2025-03-03 23:32:29'),
+(18, 11, NULL, 'hey', '2025-03-03 23:32:46'),
+(19, 11, NULL, 'hii', '2025-03-03 23:33:17');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `contactus`
 --
 
@@ -61,7 +107,10 @@ CREATE TABLE `contactus` (
 INSERT INTO `contactus` (`id`, `name`, `email`, `message`, `date`) VALUES
 (14, 'cp', 'cpkhanal0@gmail.com', 'hi', '2025-02-06 01:41:36'),
 (15, 'Hi Boss', 'hi@gmail.com', 'This is test 1 check ing the dashboard\r\n', '2025-02-28 23:41:07'),
-(16, 'cp khanal', 'test1@gmail.com', 'hi nice to meet you\r\n', '2025-03-01 00:47:45');
+(16, 'cp khanal', 'test1@gmail.com', 'hi nice to meet you\r\n', '2025-03-01 00:47:45'),
+(17, 'Chandra Prakash Khanal', 'cpkhanal0@gmail.com', 'Hi I would like to talk to you!\r\n', '2025-03-03 03:12:28'),
+(18, 'CP', 'cpkhanal0@gmail.com', 'This is a test to check if profile is working or not', '2025-03-03 19:52:45'),
+(19, 'Ankit', 'ankitpoudel@gmail.com', 'This a a message form ankit', '2025-03-03 20:46:06');
 
 -- --------------------------------------------------------
 
@@ -90,7 +139,14 @@ INSERT INTO `order_manager` (`Order_Id`, `Full_Name`, `Phone_No`, `Address`, `Pa
 (12, 'test2', 12, 'ss', 'COD'),
 (13, 'test3', 12345, 'abc', 'COD'),
 (14, 'test4', 123, 'test4', 'COD'),
-(15, 'test5', 123, '12', 'COD');
+(15, 'test5', 123, '12', 'COD'),
+(16, 'cp', 11111111, '33 city', 'COD'),
+(17, 'boss', 12, 'dd', 'COD'),
+(18, 'cp', 4376602672, '33 city center dr', 'COD'),
+(19, 'cp', 4376602672, '33 city center dr', 'COD'),
+(20, 'test1', 1111, 'test1', 'COD'),
+(21, 'test1', 111222333, '12345', 'COD'),
+(22, 'Ankit', 123, '33 city center dr', 'COD');
 
 -- --------------------------------------------------------
 
@@ -111,7 +167,10 @@ CREATE TABLE `userdetails` (
 --
 
 INSERT INTO `userdetails` (`id`, `email`, `name`, `password`, `created_at`) VALUES
-(195, 'boss@gmail.com', '', '$2y$10$MYHFgOivFYcmB9kPtN8F6eldTtoFn2Ldy0J9MaQLmUQnhMMzOl48y', '2025-03-01 02:03:27');
+(196, 'boss@gmail.com', 'CP', '$2y$10$al3NBx2ozB8SWVJYzg808OunWtvu7xic8UVH4E2GaOhpGbGkiPT7O', '2025-03-01 02:39:54'),
+(197, 'cpkhanal0@gmail.com', 'CP', '$2y$10$0CMQhDY4z.T5FCBl.zJojORleuHmDDcLMzKNBnzP/E4wiiWkKNey2', '2025-03-03 19:48:37'),
+(198, 'test1@gmail.com', 'test1', '$2y$10$eujA4v8jRQiRNsSeBSxnaeiiBQgjvM5cpCTxvtEr8x.wGbAxuQxQu', '2025-03-03 19:54:51'),
+(199, 'ankitpoudel@gmail.com', 'Ankit', '$2y$10$a40fhSroPcdYmArldDQibu3v/0Dl3ErGnTynjBhRVo0wigQDrgCC.', '2025-03-03 20:45:07');
 
 -- --------------------------------------------------------
 
@@ -153,7 +212,23 @@ INSERT INTO `user_orders` (`Order_Id`, `Item_Name`, `Price`, `Quantity`) VALUES
 (14, 'Cant Hurt Me', 40, 2),
 (14, 'The Psychology of Money', 50, 1),
 (14, 'How to Win Friends and Influence People', 55, 1),
-(15, 'Cant Hurt Me', 40, 1);
+(15, 'Cant Hurt Me', 40, 1),
+(16, 'The Magic', 60, 1),
+(16, 'The Psychology of Money', 50, 1),
+(17, 'Harry Potter', 45, 1),
+(18, 'Chanakya Neeti', 60, 1),
+(19, 'Harry Potter', 45, 1),
+(19, 'Cant Hurt Me', 40, 1),
+(19, 'Deep Work', 50, 1),
+(20, 'The Psychology of Money', 50, 1),
+(20, 'Harry Potter', 45, 1),
+(20, 'How to Win Friends and Influence People', 55, 1),
+(21, 'Harry Potter', 45, 1),
+(21, 'The Psychology of Money', 50, 1),
+(21, 'How to Win Friends and Influence People', 55, 1),
+(21, 'The 48 Laws of Power', 60, 1),
+(21, 'The Magic', 60, 1),
+(22, 'The 48 Laws of Power', 60, 2);
 
 --
 -- Indexes for dumped tables
@@ -165,6 +240,20 @@ INSERT INTO `user_orders` (`Order_Id`, `Item_Name`, `Price`, `Quantity`) VALUES
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `username` (`username`);
+
+--
+-- Indexes for table `announcements`
+--
+ALTER TABLE `announcements`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `announcement_replies`
+--
+ALTER TABLE `announcement_replies`
+  ADD PRIMARY KEY (`reply_id`),
+  ADD KEY `announcement_id` (`announcement_id`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indexes for table `contactus`
@@ -195,22 +284,45 @@ ALTER TABLE `admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `announcements`
+--
+ALTER TABLE `announcements`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT for table `announcement_replies`
+--
+ALTER TABLE `announcement_replies`
+  MODIFY `reply_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
 -- AUTO_INCREMENT for table `contactus`
 --
 ALTER TABLE `contactus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `order_manager`
 --
 ALTER TABLE `order_manager`
-  MODIFY `Order_Id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `Order_Id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `userdetails`
 --
 ALTER TABLE `userdetails`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=196;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=200;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `announcement_replies`
+--
+ALTER TABLE `announcement_replies`
+  ADD CONSTRAINT `announcement_replies_ibfk_1` FOREIGN KEY (`announcement_id`) REFERENCES `announcements` (`id`),
+  ADD CONSTRAINT `announcement_replies_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `userdetails` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

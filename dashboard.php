@@ -31,13 +31,13 @@ $message_result = mysqli_query($conn, $message_query);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Dashboard</title>
-    <!-- Add Bootstrap CSS link here -->
+    <title>BookStore</title>
+    <!-- Add Bootstrap CSS link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Navbar (Optional) -->
+    <!-- Navbar  -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Bookstore Dashboard</a>
@@ -104,7 +104,7 @@ $message_result = mysqli_query($conn, $message_query);
             </div>
         </div>
 
-        <!-- User Messages Section (optional) -->
+        <!-- User Messages Section -->
         <div class="card">
             <div class="card-header">
                 <h3>Your Messages</h3>
@@ -126,7 +126,7 @@ $message_result = mysqli_query($conn, $message_query);
         </div>
     </div>
 
-    <!-- Add Bootstrap JS link here -->
+    <!-- Add Bootstrap JS link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
