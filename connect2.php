@@ -4,14 +4,17 @@ $name = $_POST['name'] ?? '';
 $email = $_POST['email'] ?? '';
 $message = $_POST['message'] ?? '';
 
-// Database connection parameters
-$servername = "localhost";
-$username = "root"; // Your actual database username
-$password = ""; // Your actual database password
-$dbname = "bookstore";
+// // Database connection parameters
+// $servername = "localhost";
+// $username = "root"; // Your actual database username
+// $password = ""; // Your actual database password
+// $dbname = "bookstore";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+// // Create connection
+// $conn = new mysqli($servername, $username, $password, $dbname);
+
+// Include database connection
+include('db_connection.php');
 
 // Check connection
 if ($conn->connect_error) {

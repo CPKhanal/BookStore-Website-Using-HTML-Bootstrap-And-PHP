@@ -1,6 +1,8 @@
 <?php
 session_start();
-$conn = mysqli_connect('localhost', 'root', '', 'bookstore');
+// $conn = mysqli_connect('localhost', 'root', '', 'bookstore');
+// Include database connection
+include('db_connection.php');
 if (mysqli_connect_error()) {
     echo "
         <script>

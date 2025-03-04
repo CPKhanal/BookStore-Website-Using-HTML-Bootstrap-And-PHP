@@ -8,7 +8,9 @@ if (!isset($_SESSION["admin_logged_in"])) {
 ?>
 <?php
 // Connect to database
-$conn = new mysqli("localhost", "root", "", "bookstore");
+// $conn = new mysqli("localhost", "root", "", "bookstore");
+// Include database connection
+include('db_connection.php');
 
 // Check connection
 if ($conn->connect_error) {

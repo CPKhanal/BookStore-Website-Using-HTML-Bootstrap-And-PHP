@@ -13,14 +13,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Hash the password before storing it in the database
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    // Database credentials (ensure these are correct)
-    $servername = 'localhost';
-    $username = 'root';
-    $db_password = '';
-    $dbname = 'bookstore';
+    // // Database credentials (ensure these are correct)
+    // $servername = 'localhost';
+    // $username = 'root';
+    // $db_password = '';
+    // $dbname = 'bookstore';
 
-    // Create a connection
-    $conn = new mysqli($servername, $username, $db_password, $dbname);
+    // // Create a connection
+    // $conn = new mysqli($servername, $username, $db_password, $dbname);
+
+    // Include database connection
+    include('db_connection.php');
 
     // Check connection
     if ($conn->connect_error) {

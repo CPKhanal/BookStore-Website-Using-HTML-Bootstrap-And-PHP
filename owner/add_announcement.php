@@ -5,7 +5,9 @@ if (!isset($_SESSION["admin_logged_in"])) {
     exit();
 }
 
-$conn = new mysqli("localhost", "root", "", "bookstore");
+// $conn = new mysqli("localhost", "root", "", "bookstore");
+// Include database connection
+include('db_connection.php');
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }

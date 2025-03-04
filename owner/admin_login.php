@@ -1,6 +1,8 @@
 <?php
 session_start();
-$conn = new mysqli("localhost", "root", "", "bookstore");
+// $conn = new mysqli("localhost", "root", "", "bookstore");
+// Include database connection
+include('db_connection.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];

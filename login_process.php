@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 
-    // Database credentials (ensure these are correct)
+    // Database credentials
     $servername = 'localhost';
     $username = 'root';
     $db_password = '';
