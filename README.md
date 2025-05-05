@@ -4,6 +4,14 @@ A dynamic online BookStore project built using **HTML**, **Bootstrap**, **PHP**,
 
 ---
 
+## 🌐 Live Demo
+
+🔗 Visit the live site here: [https://bookstore.42web.io/](https://bookstore.42web.io/)
+
+> Hosted using InfinityFree + 000WebHost (or similar free hosting platform).
+
+---
+
 ## 🔍 Features
 
 - 👤 User login & signup system
@@ -20,7 +28,7 @@ A dynamic online BookStore project built using **HTML**, **Bootstrap**, **PHP**,
 
 - **Frontend**: HTML5, CSS3, Bootstrap
 - **Backend**: PHP
-- **Database**: MySQL (via XAMPP)
+- **Database**: MySQL (via XAMPP / phpMyAdmin)
 - **Others**: JavaScript, PHP includes
 
 ---
