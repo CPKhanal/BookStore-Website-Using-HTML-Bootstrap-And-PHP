@@ -8,7 +8,6 @@ A dynamic online BookStore project built using **HTML**, **Bootstrap**, **PHP**,
 
 🔗 Visit the live site here: [https://bookstore.42web.io/](https://bookstore.42web.io/)
 
-> Hosted using InfinityFree + 000WebHost (or similar free hosting platform).
 
 ---
 
