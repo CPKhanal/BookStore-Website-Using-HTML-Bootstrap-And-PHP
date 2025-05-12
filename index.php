@@ -269,7 +269,8 @@
 <!-- Dynamic Books Section -->
 <div class="row">
 <?php
-$conn = new mysqli("localhost", "root", "", "bookstore");
+// $conn = new mysqli("localhost", "root", "", "bookstore");
+include('db_connection.php');
 $result = $conn->query("SELECT * FROM books");
 
 while ($row = $result->fetch_assoc()) {

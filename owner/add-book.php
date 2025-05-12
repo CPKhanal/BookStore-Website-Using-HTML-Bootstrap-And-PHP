@@ -5,7 +5,8 @@ if (!isset($_SESSION["admin_logged_in"])) {
     exit();
 }
 
-$conn = new mysqli("localhost", "root", "", "bookstore");
+// $conn = new mysqli("localhost", "root", "", "bookstore");
+include('db_connection.php');
 
 if (isset($_POST['submit'])) {
     $title = $_POST['title'];
