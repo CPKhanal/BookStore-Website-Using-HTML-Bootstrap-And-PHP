@@ -2,11 +2,11 @@
 // Database credentials
 $servername = "localhost";
 $username = "root";
-$password = "";
+$db_password = "";
 $dbname = "bookstore";
 
 // Create connection using OOP approach
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $db_password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {

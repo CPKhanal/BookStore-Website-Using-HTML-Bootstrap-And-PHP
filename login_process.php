@@ -14,13 +14,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Database credentials
-    $servername = 'localhost';
-    $username = 'root';
-    $db_password = '';
-    $dbname = 'bookstore';
+    // $servername = 'localhost';
+    // $username = 'root';
+    // $db_password = '';
+    // $dbname = 'bookstore';
 
     // Create a connection to the database
-    $conn = new mysqli($servername, $username, $db_password, $dbname);
+    // $conn = new mysqli($servername, $username, $db_password, $dbname);
+    include('db_connection.php');
 
     // Check connection
     if ($conn->connect_error) {
